@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calc" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d2y-zt-c60" userLabel="LeftOperand">
+                                <rect key="frame" x="0.0" y="64" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sPm-t9-G9V"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qga-gy-g2X">
+                                <rect key="frame" x="109" y="102" width="30" height="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <action selector="selectedAdd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FHt-44-Fg2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnq-yy-LlC">
+                                <rect key="frame" x="152" y="102" width="30" height="30"/>
+                                <state key="normal" title="-"/>
+                                <connections>
+                                    <action selector="selectedMinus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHT-i8-jKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0uo-fo-Aah">
+                                <rect key="frame" x="233" y="102" width="30" height="30"/>
+                                <state key="normal" title="*"/>
+                                <connections>
+                                    <action selector="selectedMultiply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nIh-3q-krG"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qBl-wb-iWo" userLabel="RightOperand">
+                                <rect key="frame" x="0.0" y="140" width="414" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zff-Vj-je1">
+                                <rect key="frame" x="172.5" y="178" width="69" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="sAq-Wv-ZCN"/>
+                                </constraints>
+                                <state key="normal" title="="/>
+                                <connections>
+                                    <action selector="calculate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aLj-W1-lwe"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bBM-Uc-eBK" userLabel="Result">
+                                <rect key="frame" x="0.0" y="216" width="414" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q7B-o6-FhE"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DFF-8A-mxC">
+                                <rect key="frame" x="271" y="102" width="30" height="30"/>
+                                <state key="normal" title="/"/>
+                                <connections>
+                                    <action selector="selectedDivide:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A0a-Ix-7MJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0uo-fo-Aah" firstAttribute="top" secondItem="d2y-zt-c60" secondAttribute="bottom" constant="8" id="26c-1a-juG"/>
+                            <constraint firstItem="zff-Vj-je1" firstAttribute="top" secondItem="qBl-wb-iWo" secondAttribute="bottom" constant="8" id="CT7-5N-hMs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBl-wb-iWo" secondAttribute="trailing" id="Gme-cd-r4g"/>
+                            <constraint firstItem="bBM-Uc-eBK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MBc-GV-vw9"/>
+                            <constraint firstItem="d2y-zt-c60" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="QjC-xQ-qWn"/>
+                            <constraint firstItem="qBl-wb-iWo" firstAttribute="top" secondItem="qga-gy-g2X" secondAttribute="bottom" constant="8" id="Qw6-B1-Q9L"/>
+                            <constraint firstItem="d2y-zt-c60" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="T48-YG-wMU"/>
+                            <constraint firstItem="d2y-zt-c60" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Vj3-jz-xIg"/>
+                            <constraint firstItem="cnq-yy-LlC" firstAttribute="leading" secondItem="qga-gy-g2X" secondAttribute="trailing" constant="13" id="XFZ-De-w0Y"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zff-Vj-je1" secondAttribute="trailing" constant="172.5" id="Ze6-3W-ezI"/>
+                            <constraint firstItem="DFF-8A-mxC" firstAttribute="leading" secondItem="0uo-fo-Aah" secondAttribute="trailing" constant="8" id="aR9-Fg-5eH"/>
+                            <constraint firstItem="DFF-8A-mxC" firstAttribute="top" secondItem="d2y-zt-c60" secondAttribute="bottom" constant="8" id="af5-iy-tUg"/>
+                            <constraint firstItem="qga-gy-g2X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="109" id="bIP-ES-3dL"/>
+                            <constraint firstItem="qBl-wb-iWo" firstAttribute="top" secondItem="0uo-fo-Aah" secondAttribute="bottom" constant="8" id="bs0-7e-dox"/>
+                            <constraint firstItem="zff-Vj-je1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="172.5" id="cse-k8-CYz"/>
+                            <constraint firstItem="bBM-Uc-eBK" firstAttribute="top" secondItem="zff-Vj-je1" secondAttribute="bottom" constant="8" id="dBH-nM-JHT"/>
+                            <constraint firstItem="qBl-wb-iWo" firstAttribute="top" secondItem="DFF-8A-mxC" secondAttribute="bottom" constant="8" id="h4o-NN-aba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bBM-Uc-eBK" secondAttribute="trailing" id="kD9-ks-naQ"/>
+                            <constraint firstItem="qBl-wb-iWo" firstAttribute="top" secondItem="cnq-yy-LlC" secondAttribute="bottom" constant="8" id="ouN-Ey-OAb"/>
+                            <constraint firstItem="cnq-yy-LlC" firstAttribute="top" secondItem="d2y-zt-c60" secondAttribute="bottom" constant="8" id="qp9-Gc-A21"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DFF-8A-mxC" secondAttribute="trailing" constant="113" id="z4O-8L-PVq"/>
+                            <constraint firstItem="qBl-wb-iWo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zBU-DD-YAm"/>
+                            <constraint firstItem="qga-gy-g2X" firstAttribute="top" secondItem="d2y-zt-c60" secondAttribute="bottom" constant="8" id="zot-f9-gDX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="executeButton" destination="zff-Vj-je1" id="Gvu-a9-Z2O"/>
+                        <outlet property="leftOperandTextField" destination="d2y-zt-c60" id="AVM-U9-sdp"/>
+                        <outlet property="resultTextField" destination="bBM-Uc-eBK" id="ojI-0V-Z5L"/>
+                        <outlet property="rightOperandTextField" destination="qBl-wb-iWo" id="P5Z-4A-EX5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
